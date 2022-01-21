@@ -13,7 +13,7 @@ export const fetchSmurfs = () => {
             .then(resp => {
                 console.log(`Data being sent ${resp}`);
                 dispatch(smurfFetchSuccess(resp.data));
-            }).error(error => dispatch(smurfFetchFailure(error)));
+            }).then(error => dispatch(smurfFetchFailure(error)));
     }
 }
 
