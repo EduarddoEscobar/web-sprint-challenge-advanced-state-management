@@ -1,4 +1,4 @@
-import { START_SMURF_FETCH, SMURF_FETCH_SUCCESS, SMURF_FETCH_FAILURE, ADD_SMURF, ADD_ERROR } from '../actions';
+import { START_SMURF_FETCH, SMURF_FETCH_SUCCESS, SMURF_FETCH_FAILURE, ADD_SMURF, SET_ERROR } from '../actions';
 
 export const initialState = {
     smurfs: [],
@@ -17,7 +17,8 @@ const reducer = (state = initialState, action) => {
             return{
                 ...state,
                 smurfs: action.payload,
-                loading: false
+                loading: false,
+                error: ''
             }
         case SMURF_FETCH_FAILURE:
             return{
@@ -30,7 +31,7 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 smurfs: [...state.smurfs, action.payload]
             }
-        case ADD_ERROR:
+        case SET_ERROR:
             return{
                 ...state,
                 error: action.payload

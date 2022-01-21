@@ -4,7 +4,7 @@ export const START_SMURF_FETCH = 'START_SMURF_FETCH';
 export const SMURF_FETCH_SUCCESS = 'SMURF_FETCH_SUCCESS';
 export const SMURF_FETCH_FAILURE = 'SMURF_FETCH_FAILURE';
 export const ADD_SMURF = 'ADD_SMURF';
-export const ADD_ERROR = 'ADD_ERROR';
+export const SET_ERROR = 'SET_ERROR';
 
 export const fetchSmurfs = () => {
     return(dispatch) => {
@@ -33,8 +33,8 @@ export const addSmurf = (smurf) => {
     return({type: ADD_SMURF, payload: smurf});
 }
 
-export const addError = (error) => {
-    return({type: ADD_ERROR, payload: error});
+export const setError = (error) => {
+    return({type: SET_ERROR, payload: error});
 }
 
 //Task List:

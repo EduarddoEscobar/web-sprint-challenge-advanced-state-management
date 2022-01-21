@@ -9,7 +9,7 @@ import Smurf from './Smurf';
     }
 
     return(<div className="listContainer">
-        {smurfs.map(smurf => <Smurf smurf={smurf}/>)}
+        {smurfs.map((smurf, ind) => <Smurf key={ind} smurf={smurf}/>)}
     </div>);
 }
 
