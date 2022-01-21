@@ -102,19 +102,20 @@ In this project, you will build the reducer, actions and basic redux connects to
 * Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work.
 
 ## Submission format
-* [ ] Submit via Codegrade by committing and pushing any new changes to **your main branch.**
-* [ ] Check Codegrade before the deadline to compare its results against your local tests.
-* [ ] Check Codegrade on the days following the Sprint Challenge for reviewer feedback. For more information on how to access and read your feedback, check [here](https://www.notion.so/lambdaschool/How-to-View-Feedback-in-CodeGrade-c5147cee220c4044a25de28bcb6bb54a)
-* [ ] New commits will be evaluated by Codegrade if pushed before the sprint challenge deadline.
+* [x] Submit via Codegrade by committing and pushing any new changes to **your main branch.**
+* [x] Check Codegrade before the deadline to compare its results against your local tests.
+* [x] Check Codegrade on the days following the Sprint Challenge for reviewer feedback. For more information on how to access and read your feedback, check [here](https://www.notion.so/lambdaschool/How-to-View-Feedback-in-CodeGrade-c5147cee220c4044a25de28bcb6bb54a)
+* [x] New commits will be evaluated by Codegrade if pushed before the sprint challenge deadline.
 
 ## Interview Questions
 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. Add your answers below.
 
 1. What problem does the context API help solve?
-
+    Context API helps solve the problem of prop drilling by giving you a way to pass state across the entire component and children components.
 2. In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
-
+    store is the brain of all your state allowing the entire application to get whatever is inside of it. reducers are the interpreters of the actions by changing state from the action type. actions are the main functions that you want to be able to use to change state by sending out types and payloads to the reducer.
 3. What does `redux-thunk` allow us to do? How does it change our `action-creators`?
-
+    redux-thunk allows you to dispatch actions asynchronously. It changes the action creators by intercepting the action so you can do stuff before and after actions make it to the reducer.
 4. What is your favorite state management system you've learned and this sprint? Please explain why!
+    Redux, I love how easy it is to use and implement to all your components.
